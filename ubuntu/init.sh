@@ -4,7 +4,11 @@ sudo apt update
 sudo dpkg-reconfigure unattended-upgrades
 sudo systemctl set-default multi-user.target
 
+#ssh server
+sudo apt-get install openssh-server
+ssh-keygen
 
+#data 
 mkdir ~/data
 mkdir ~/data/docker_data  ~/data/go_path  ~/data/proj
 
