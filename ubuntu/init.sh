@@ -31,6 +31,8 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo cp config/daemon.json /etc/docker/
+sudo systemctl restart docker.service
 sudo docker run hello-world
 
 
@@ -51,6 +53,11 @@ chmod +x config/gf_linux_amd64
 #done
 echo "init env done"
 echo "should config nat rule if use vbox"
+
+#no gui
+sudo systemctl set-default multi-user.target
+#sudo systemctl start gdm3.service
+#sudo systemctl set-default graphical.target
 
 
 
