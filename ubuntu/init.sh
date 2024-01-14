@@ -6,6 +6,7 @@ sudo systemctl set-default multi-user.target
 
 #ssh server
 sudo apt-get install openssh-server
+sudo apt-get install vim
 ssh-keygen
 
 #data 
@@ -15,6 +16,7 @@ mkdir ~/data/docker_data  ~/data/go_path  ~/data/proj
 #go
 tar zxf config/go1.21.6.linux-amd64.tar.gz -C ~/data/
 cat config/bashrc >> ~/.bashrc
+source ~/.bashrc
 
 #docker
 # Add Docker's official GPG key:
@@ -35,11 +37,11 @@ sudo docker run hello-world
 #msql docker
 #mysql gui:https://www.heidisql.com/?place=lnklblWebpage
 mkdir -p ~/data/docker_data/mysql/conf ~/data/docker_data/mysql/data ~/data/docker_data/mysql/log
-docker run --name mysql -d -p 3306:3306 --restart unless-stopped -v ~/data/docker_data/mysql/log:/var/log/mysql -v ~/data/docker_data/mysql/data:/var/lib/mysql -v ~/data/docker_data/mysql/conf:/etc/mysql -e MYSQL_ROOT_PASSWORD=123456 mysql:5.7
+sudo docker run --name mysql -d -p 3306:3306 --restart unless-stopped -v ~/data/docker_data/mysql/log:/var/log/mysql -v ~/data/docker_data/mysql/data:/var/lib/mysql -v ~/data/docker_data/mysql/conf:/etc/mysql -e MYSQL_ROOT_PASSWORD=123456 mysql:5.7
 
 #redis docker
 #redis gui:https://gitee.com/qishibo/AnotherRedisDesktopManager/releases
-docker run --restart=always -p 6379:6379 --name redis -d redis:7.0.12  --requirepass 123456
+sudo docker run --restart=always -p 6379:6379 --name redis -d redis:7.0.12  --requirepass 123456
 
 
 #gf install
