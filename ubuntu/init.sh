@@ -50,6 +50,13 @@ sudo docker run --restart=always -p 6379:6379 --name redis -d redis:7.0.12  --re
 chmod +x config/gf_linux_amd64
 ./config/gf_linux_amd64
 
+#docker-compose install
+sudo cp config/docker-compose /usr/local/bin/docker-compose
+
+#pip config
+sudo mkdir ~/.pip
+sudo cp config/pip.conf ~/.pip
+
 #done
 echo "init env done"
 echo "should config nat rule if use vbox"
@@ -60,4 +67,7 @@ sudo systemctl set-default multi-user.target
 #sudo systemctl set-default graphical.target
 
 
+#with guid
+#sudo apt install build-essential
+#sudo apt install gcc-12 g++-12
 
