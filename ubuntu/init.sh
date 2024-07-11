@@ -46,9 +46,17 @@ sudo docker run --name mysql -d -p 3306:3306 --restart unless-stopped -v ~/data/
 sudo docker run --restart=always -p 6379:6379 --name redis -d redis:7.0.12  --requirepass 123456
 
 
-#gf install
+#gf install and kitex,hertz
 chmod +x config/gf_linux_amd64
 ./config/gf_linux_amd64
+go install github.com/cloudwego/hertz/cmd/hz@latest
+go install github.com/cloudwego/kitex/tool/cmd/kitex@latest
+go install github.com/kitex-contrib/kitexcall@latest
+go install go.uber.org/mock/mockgen@latest
+go install -v github.com/cloudwego/thriftgo@latest
+go install github.com/cloudwego/thrift-gen-validator@latest
+go install github.com/google/gnostic/cmd/protoc-gen-openapi@latest
+
 
 #docker-compose install
 sudo cp config/docker-compose /usr/local/bin/docker-compose
