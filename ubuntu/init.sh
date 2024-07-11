@@ -56,6 +56,7 @@ go install go.uber.org/mock/mockgen@latest
 go install -v github.com/cloudwego/thriftgo@latest
 go install github.com/cloudwego/thrift-gen-validator@latest
 go install github.com/google/gnostic/cmd/protoc-gen-openapi@latest
+go install github.com/google/wire/cmd/wire
 sudo apt install graphviz
 
 
