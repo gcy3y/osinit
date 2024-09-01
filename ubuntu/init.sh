@@ -79,9 +79,11 @@ echo "should config nat rule if use vbox"
 
 #with dev need
 sudo apt install build-essential linux-source -y
+sudo dpkg -i config/code_1.92.2-1723660989_amd64.deb
 #with guid
 #sudo apt install gcc-12 g++-12
 #
 #fanqiang wendang https://note.youdao.com/s/P2osjLQe
 sudo apt install chromium-browser
+
 
