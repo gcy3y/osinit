@@ -72,7 +72,7 @@ echo "init env done"
 echo "should config nat rule if use vbox"
 
 #no gui
-sudo systemctl set-default multi-user.target
+#sudo systemctl set-default multi-user.target
 #sudo systemctl start gdm3.service
 #sudo systemctl set-default graphical.target
 
@@ -80,4 +80,7 @@ sudo systemctl set-default multi-user.target
 #with guid
 #sudo apt install build-essential
 #sudo apt install gcc-12 g++-12
+#
+#fanqiang wendang https://note.youdao.com/s/P2osjLQe
+sudo apt install chromium-browser
 
