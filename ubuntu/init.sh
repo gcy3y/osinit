@@ -77,8 +77,9 @@ echo "should config nat rule if use vbox"
 #sudo systemctl set-default graphical.target
 
 
+#with dev need
+sudo apt install build-essential linux-source -y
 #with guid
-#sudo apt install build-essential
 #sudo apt install gcc-12 g++-12
 #
 #fanqiang wendang https://note.youdao.com/s/P2osjLQe
