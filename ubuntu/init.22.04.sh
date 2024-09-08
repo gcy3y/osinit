@@ -23,8 +23,12 @@ source ~/.bashrc
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg
 sudo install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
+#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
+# Step 3: 写入软件源信息
+#sudo chmod a+r /etc/apt/keyrings/docker.gpg
+sudo add-apt-repository "deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
+
 
 # Add the repository to Apt sources:
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
@@ -67,23 +71,27 @@ sudo cp config/docker-compose /usr/local/bin/docker-compose
 sudo mkdir ~/.pip
 sudo cp config/pip.conf ~/.pip
 
+
+# dev essential
+sudo apt install build-essential linux-source
+
 #done
 echo "init env done"
 echo "should config nat rule if use vbox"
 
 #no gui
-#sudo systemctl set-default multi-user.target
+sudo systemctl set-default multi-user.target
 #sudo systemctl start gdm3.service
 #sudo systemctl set-default graphical.target
 
 
 #with dev need
-sudo apt install build-essential linux-source -y
-sudo dpkg -i config/code_1.92.2-1723660989_amd64.deb
+
+
+# with gui
+#sudo dpkg -i config/code_1.92.2-1723660989_amd64.deb
 #with guid
 #sudo apt install gcc-12 g++-12
 #
 #fanqiang wendang https://note.youdao.com/s/P2osjLQe
-sudo apt install chromium-browser
-
-
+#sudo apt install chromium-browser
