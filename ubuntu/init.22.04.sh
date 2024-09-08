@@ -7,6 +7,7 @@ sudo systemctl set-default multi-user.target
 #ssh server
 sudo apt-get install openssh-server
 sudo apt-get install vim
+sudo apt install net-tools
 ssh-keygen
 
 #data 
@@ -28,6 +29,7 @@ curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key 
 # Step 3: 写入软件源信息
 #sudo chmod a+r /etc/apt/keyrings/docker.gpg
 sudo add-apt-repository "deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 7EA0A9C3F273FCD8
 
 
 # Add the repository to Apt sources:
