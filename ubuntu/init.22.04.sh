@@ -3,6 +3,7 @@ sudo cp config/sources.list /etc/apt/sources.list
 sudo apt update
 sudo dpkg-reconfigure unattended-upgrades
 sudo systemctl set-default multi-user.target
+touch ~/.ssh/authorized_keys
 
 #ssh server
 sudo apt-get install openssh-server
