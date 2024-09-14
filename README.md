@@ -9,7 +9,7 @@
 
 
 #### 安装教程
-
+git clone https://gitee.com/gcy3y/osinit.git
 cd ubuntu
 bash init.22.04.sh
 
