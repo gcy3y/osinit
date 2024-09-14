@@ -10,6 +10,7 @@ touch ~/.ssh/authorized_keys
 sudo apt-get install openssh-server
 sudo apt-get install vim
 sudo apt install net-tools
+sudo apt install plocate
 ssh-keygen
 
 #data 
@@ -28,6 +29,7 @@ sudo apt-get install ca-certificates curl gnupg
 sudo install -m 0755 -d /etc/apt/keyrings
 #curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
+sudo cp config/docker_gpg /etc/apt/trusted.gpg.d/docker_gpg
 # Step 3: 写入软件源信息
 #sudo chmod a+r /etc/apt/keyrings/docker.gpg
 sudo add-apt-repository "deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
