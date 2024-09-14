@@ -9,9 +9,11 @@
 
 
 #### 安装教程
+```shell
 git clone https://gitee.com/gcy3y/osinit.git
 cd ubuntu
 bash init.22.04.sh
+```
 
 #### 使用说明
 1. 重复安装，需要修改 ~/.bashrc 最后的多行，去除重复的即可
