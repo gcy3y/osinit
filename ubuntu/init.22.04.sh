@@ -1,3 +1,4 @@
+set -x
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bk
 sudo cp config/sources.list /etc/apt/sources.list
 sudo apt update
