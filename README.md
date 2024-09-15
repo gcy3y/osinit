@@ -2,7 +2,10 @@
 
 一键安装go开发环境和docker环境。
 支持ubuntu22.04版本。
-安装完成后，是不带界面的ubuntu环境，可使用vscode远程开发
+安装完成后，是不带界面的ubuntu环境.
+可以在windows环境下，使用virtualbox安装ubuntu22.04版本.然后在22.04ubuntu版本中执行这个仓库的脚本搭建环境。
+也可以在远程ubuntu22.04机器中执行安装脚本.
+安装完成后，可在本地windows环境下，安装vscode，安装远程插件(Remote Explorer,Remote - SSH),即可远程连接virtualbox或者远程机器中的ubuntu环境进行开发。
 
 
 #### 软件架构
@@ -18,6 +21,7 @@ bash init.22.04.sh
 
 #### 使用说明
 1. 重复安装，需要修改 ~/.bashrc 最后的多行，去除重复的即可
+2. 安装前，可先看下脚本内容,根据个人需要删减
 #### 参与贡献
 
 1.  Fork 本仓库
